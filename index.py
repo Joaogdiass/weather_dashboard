@@ -37,6 +37,9 @@ def buscar_previsao(lat, lon):
 st.set_page_config(page_title="Clima em Tempo Real", page_icon="⛅", layout="wide")
 st.title("🌦️ Dashboard de Clima em Tempo Real")
 
+
+
+
 # Verificação da API
 if not API_KEY:
     st.error("❌ Chave da API não encontrada. Verifique o .env.")
