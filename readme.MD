@@ -47,8 +47,6 @@ pip install -r requirements.txt
 Crie um arquivo .env na raiz do projeto com:
 
 env
-Copiar
-Editar
 OPENWEATHER_API_KEY=sua_chave_aqui
 Obtenha sua chave em: https://openweathermap.org/appid
 
