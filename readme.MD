@@ -32,19 +32,17 @@ Este é um projeto interativo desenvolvido com **Python + Streamlit**, que permi
 ```bash
 git clone https://github.com/seu-usuario/dashboard-clima-streamlit.git
 cd dashboard-clima-streamlit
+
 2. Crie um ambiente virtual e ative
-bash
-Copiar
-Editar
+
 python -m venv venv
 venv\Scripts\activate  # Windows
 # ou
 source venv/bin/activate  # Mac/Linux
 3. Instale as dependências
-bash
-Copiar
-Editar
+
 pip install -r requirements.txt
+
 4. Configure sua chave da API
 Crie um arquivo .env na raiz do projeto com:
 
@@ -55,14 +53,12 @@ OPENWEATHER_API_KEY=sua_chave_aqui
 Obtenha sua chave em: https://openweathermap.org/appid
 
 5. Execute o app
-bash
-Copiar
-Editar
+
+
 streamlit run index.py
 📂 Estrutura do Projeto
-bash
-Copiar
-Editar
+
+
 📁 dashboard-clima/
 ├── .env
 ├── index.py
