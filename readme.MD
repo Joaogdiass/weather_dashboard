@@ -9,9 +9,9 @@ Este é um projeto interativo desenvolvido com **Python + Streamlit**, que permi
 
 ---
 
-## 📸 Demonstração
+## 📸 Site
 
-![Preview do Dashboard](https://via.placeholder.com/1000x400.png?text=Insira+um+print+do+dashboard+aqui)
+![Link site](https://weatherdb.streamlit.app)
 
 ---
 
