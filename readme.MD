@@ -30,8 +30,8 @@ Este é um projeto interativo desenvolvido com **Python + Streamlit**, que permi
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/dashboard-clima-streamlit.git
-cd dashboard-clima-streamlit
+git clone https://github.com/seu-usuario/weather_dashboard.git
+cd weather_dashboard
 
 2. Crie um ambiente virtual e ative
 
