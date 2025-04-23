@@ -2,10 +2,8 @@ import streamlit as st
 import requests
 import os
 from dotenv import load_dotenv
-from datetime import datetime, date, timedelta
+from datetime import datetime
 import plotly.graph_objs as go
-from meteostat import Daily, Point
-import pytz
 
 # Carrega API Key
 load_dotenv()
@@ -37,9 +35,6 @@ def buscar_previsao(lat, lon):
 st.set_page_config(page_title="Clima em Tempo Real", page_icon="⛅", layout="wide")
 st.title("🌦️ Dashboard de Clima em Tempo Real")
 
-
-
-
 # Verificação da API
 if not API_KEY:
     st.error("❌ Chave da API não encontrada. Verifique o .env.")
@@ -65,7 +60,8 @@ if cidade:
     lat, lon = get_coordinates(cidade)
 
     if dados and lat and lon:
-        st.session_state.historico.append(cidade)
+        if cidade not in st.session_state.historico:
+            st.session_state.historico.append(cidade)
 
         if pagina == "🌍 Clima Atual":
             st.subheader(f"📍 {dados['name']}, {dados['sys']['country']}")
@@ -136,15 +132,13 @@ if cidade:
                     x=list(dias.keys()),
                     y=[v["temp_max"] for v in dias.values()],
                     mode='lines+markers',
-                    name='Temp Máx',
-                    line=dict(color='firebrick')
+                    name='Temp Máx'
                 ))
                 fig.add_trace(go.Scatter(
                     x=list(dias.keys()),
                     y=[v["temp_min"] for v in dias.values()],
                     mode='lines+markers',
-                    name='Temp Mín',
-                    line=dict(color='royalblue')
+                    name='Temp Mín'
                 ))
                 fig.update_layout(xaxis_title='Dia', yaxis_title='Temperatura (°C)', height=400)
                 st.plotly_chart(fig, use_container_width=True)
